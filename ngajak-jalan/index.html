@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mau Jalan Bareng Aku?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <header class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">A LITTLE PLAN FOR US</p>
+                <h1>Mau jalan<br><span>bareng aku?</span></h1>
+                <p class="intro">
+                    Pilih waktu dan tempatnya. Biar kita bikin cerita
+                    kecil yang menyenangkan.
+                </p>
+
+                <button class="primary" onclick="scrollToPlan()">
+                    Buat Rencana
+                    <span>↓</span>
+                </button>
+            </div>
+
+            <div class="hero-art" aria-hidden="true"></div>
+        </header>
+
+        <section class="plan" id="plan">
+            <div class="section-heading">
+                <p class="eyebrow">OUR LITTLE PLAN</p>
+                <h2>Kapan kita pergi?</h2>
+                <p>Pilih tanggal, jam, dan kegiatan yang kamu suka.</p>
+            </div>
+
+            <div class="card">
+                <div class="field">
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" id="tanggal">
+                </div>
+
+                <div class="field">
+                    <label for="jam">Jam</label>
+                    <input type="time" id="jam">
+                </div>
+
+                <div class="field full">
+                    <label for="tempat">Mau ke mana?</label>
+                    <select id="tempat">
+                        <option value="">Pilih kegiatan</option>
+                        <option value="Makan bareng">Makan bareng</option>
+                        <option value="Nonton bioskop">Nonton bioskop</option>
+                        <option value="Ngopi santai">Ngopi santai</option>
+                        <option value="Jalan-jalan">Jalan-jalan</option>
+                        <option value="Main bareng">Main bareng</option>
+                    </select>
+                </div>
+
+                <div class="actions full">
+                    <button class="primary wide" onclick="acceptDate()">
+                        Aku Mau
+                    </button>
+                    <button class="secondary" id="noButton">
+                        Nanti dulu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="result" id="result">
+            <div class="result-card">
+                <p class="eyebrow">IT'S A DATE</p>
+                <h2>Oke, jadi! ✨</h2>
+                <p class="result-subtitle">Ini rencana kecil kita:</p>
+                <div class="date-result" id="dateResult"></div>
+                <p class="closing">Sampai ketemu nanti. Jangan lupa senyum.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
